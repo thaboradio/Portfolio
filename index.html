@@ -20,14 +20,27 @@
         var instance = M.Sidenav.init(elem);
 
         $(document).ready(function () {
-            $('.sidenav').sidenav();
+
+      
+      $("#projects_trigger").click(function(e){
+         e.preventDefault();
+        $( $(this).attr("href")).show();
+        // note, i'm purposly not using this.href due to a bug in IE that would return the entire href rather than just the hash
+    })
+    $("#skills_trigger").click(function(e){
+         e.preventDefault();
+        $( $(this).attr("href")).show();
+        $("#projectscol").hide();
+        // note, i'm purposly not using this.href due to a bug in IE that would return the entire href rather than just the hash
+    })
+
+        $('.sidenav').sidenav();
         });
     </script>
 </head>
 
 <body>
-
-
+    <!-- Side Nav and Nav Bar -->
     <nav class="amber">
         <!-- navbar content here  -->
                 <div class="nav-wrapper">
@@ -68,15 +81,66 @@
             <div class="divider"></div>
         </li>
         <li>
-            <a class="waves-effect" href="#!">Projects</a>
+            <a class="waves-effect" href="#projectcol" id="projects_trigger" data-target="">Projects</a>
         </li>
         <li>
-            <a class="waves-effect" href="#!">Skills</a>
+            <a class="waves-effect" href="#skillscol" id="skills_trigger" data-target="">Skills</a>
         </li>
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
         <i class="material-icons">menu</i>
     </a>
+<!-- End of Side Nav and Nav Bar Section -->
+
+<!-- Start of body content -->
+
+<div class="container z-depth-2">
+    
+        <ul class="collection" id="projectcol" style="display:none">
+                <li class="collection-item avatar">
+                  <img src="img/logo.jpg" alt="" class="circle">
+                  <span class="title">Portfolio</span>
+                  <p>Project Description : <br>
+                    Technology Used :
+                 </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle">folder</i>
+                  <span class="title">Portfolio</span>
+                  <p>Project Description : <br>
+                     Technology Used :
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle green">folder</i>
+                  <span class="title">Title</span>
+                  <p>Project Description : <br>
+                    Technology Used :
+                 </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle red">folder</i>
+                  <span class="title">Title</span>
+                  <p>Project Description : <br>
+                    Technology Used :
+                 </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+              </ul>
+              <br /><br /><br />
+              <ul class="collection" id="skillscol" style="display:none">
+                    <li class="collection-item">C#</li>
+                    <li class="collection-item">SharePoint</li>
+                    <li class="collection-item">JavaScript</li>
+                    <li class="collection-item">HTML 5</li>
+                    <li class="collection-item">CSS</li>
+                    <li class="collection-item">Materialize</li>
+                  </ul>
+</div>
+<!-- End of body content -->
 
 </body>
 
