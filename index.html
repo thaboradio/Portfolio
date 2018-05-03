@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="js/materialize.js"></script>
+    <!-- <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Radiopane</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="stylesheet" href="css/materialize.css" />
+    <link rel="stylesheet" href="fonts/material-icons.css" />
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+    <!-- <script src="main.js"></script> -->
+    <script>
+        var elem = document.querySelector('.sidenav');
+        var instance = M.Sidenav.init(elem);
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <nav class="amber">
+        <!-- navbar content here  -->
+                <div class="nav-wrapper">
+                  <a href="#" class="brand-logo">Radiopane</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="img/background.png" />
+                </div>
+                <a href="#user">
+                    <img class="circle" src="img/logo.jpg" />
+                </a>
+                <a href="#name">
+                    <span class="white-text name">Thabo Radiopane</span>
+                </a>
+                <a href="#email">
+                    <span class="white-text email">thbradiopane@gmail.com</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="#!">
+                <i class="material-icons">build</i>Radiopane</a>
+        </li>
+        <li>
+            <a class="subheader" href="#!">Dev Home</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a class="waves-effect" href="#!">Projects</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="#!">Skills</a>
+        </li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
+        <i class="material-icons">menu</i>
+    </a>
+
+</body>
+
+</html>
